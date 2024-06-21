@@ -18,6 +18,7 @@ export default function RootLayout({
               <SignInButton />
             </SignedOut>
             <SignedIn>
+              <ModalProvider />
               {children}
             </SignedIn>
           </main>
@@ -30,6 +31,7 @@ export default function RootLayout({
 
 
 import { clerkMiddleware } from "@clerk/nextjs/server";
+import { ModalProvider } from '@/providers/modal-provider';
 
 clerkMiddleware();
 
