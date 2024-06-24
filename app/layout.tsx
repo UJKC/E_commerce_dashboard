@@ -18,6 +18,7 @@ export default function RootLayout({
               <SignInButton />
             </SignedOut>
             <SignedIn>
+              <ToasterProvider />
               <ModalProvider />
               {children}
             </SignedIn>
@@ -32,6 +33,7 @@ export default function RootLayout({
 
 import { clerkMiddleware } from "@clerk/nextjs/server";
 import { ModalProvider } from '@/providers/modal-provider';
+import { ToasterProvider } from '@/providers/toast-provider';
 
 clerkMiddleware();
 
