@@ -10,6 +10,9 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
+          <header>
+            <UserButton showName afterSignOutUrl="/sign-in" />
+          </header>
           <main>
             <SignedOut>
               <SignInButton />

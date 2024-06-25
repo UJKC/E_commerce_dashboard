@@ -1,4 +1,3 @@
-'use client'
 import { UserButton } from "@clerk/nextjs"
 import { MainNav } from "./main-nav"
 import StoreSwitcher from "./store-switcher"
@@ -24,9 +23,6 @@ const Navbar = async () => {
             <div className="flex">
                 <StoreSwitcher items={stores}/>
                 <MainNav />
-                <div className="ml-auto flex">
-                    <UserButton showName afterSignOutUrl="/sign-in" />
-                </div>
             </div>
         </div>
     )
