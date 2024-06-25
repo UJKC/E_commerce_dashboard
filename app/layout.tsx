@@ -10,9 +10,6 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          <header>
-            <UserButton showName />
-          </header>
           <main>
             <SignedOut>
               <SignInButton />
