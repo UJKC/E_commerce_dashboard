@@ -16,6 +16,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { AlertModal } from "./modals/alert-modal";
 import { ApiAlert } from "./ui/api-alert";
+import { useOrigin } from "@/hooks/use-origin";
 
 interface SettingsFormProps {
     intialdata: Store;
@@ -32,6 +33,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ intialdata }) => {
     const [loading, setLoading] = useState(false)
     const params = useParams()
     const router = useRouter()
+    const origin = useOrigin()
 
     const form = useForm<SettingsFormValues>({
         resolver: zodResolver(formSchema),
